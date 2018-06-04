@@ -5,12 +5,13 @@ package Ex_1;
 public class Question {
 
     //Current state of the question
-    private enum QuestionState {
+    public enum QuestionState {
         NEW,
         CORRECT,
         WRONG
     }
 
+    //Properties
     public QuestionState questionState = QuestionState.NEW;
     private int answerIndex;
     private String[] options;
@@ -58,5 +59,9 @@ public class Question {
 
     public void setActualQuestion(String actualQuestion) {
         this.actualQuestion = actualQuestion;
+    }
+
+    public QuestionState getQuestionState() {
+        return questionState;
     }
 }
